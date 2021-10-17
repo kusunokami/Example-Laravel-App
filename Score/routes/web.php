@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\MusicScore;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "song" => MusicScore::all()
     ]);
 });
 

@@ -13,30 +13,21 @@
         <table class="table-bordered">
             <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Nama Lagu</th>
+                  <th scope="col">Composer(s)</th>
+                  <th scope="col">Arranger(s)</th>
+                  <th scope="col">Lyricist(s)</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($song as $music)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                    <td>{{ $music["title"] }}</td>
+                    <td>{{ $music["composer"] }}</td>
+                    <td>{{ $music["arranger"] }}</td>
+                    <td>{{ $music["lyricist"] }}</td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
+                @endforeach
               </tbody>
         </table>
     </div>
