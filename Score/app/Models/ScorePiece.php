@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ScorePiece extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'composer',
+        'arranger',
+        'lyricist',
+    ];
 }
