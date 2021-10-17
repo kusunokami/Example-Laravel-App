@@ -22,10 +22,10 @@
               <tbody>
                 @foreach($song as $music)
                 <tr>
-                    <td>{{ $music["title"] }}</td>
-                    <td>{{ $music["composer"] }}</td>
-                    <td>{{ $music["arranger"] }}</td>
-                    <td>{{ $music["lyricist"] }}</td>
+                    <td>{{ $music->title }}</td>
+                    <td>{{ $music->composer }}</td>
+                    <td>{{ $music->arranger }}</td>
+                    <td>{{ $music->lyricist }}</td>
                 </tr>
                 @endforeach
               </tbody>

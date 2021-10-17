@@ -2,6 +2,7 @@
 
 use App\Models\MusicScore;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MusicController;
 
 
 
@@ -16,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-        "song" => MusicScore::all()
-    ]);
-});
+Route::get('/', [MusicController::class, 'index']);
 
 Route::get('/test', function(){
     return view('test', [
