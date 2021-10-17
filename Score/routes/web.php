@@ -24,3 +24,9 @@ Route::get('/test', function(){
         "title" => "Test"
     ]);
 });
+
+Route::get('/addScore',function(){
+    return view('addScore',[
+        "title" => "Add a Score"
+    ]);
+});

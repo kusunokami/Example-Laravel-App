@@ -5,8 +5,8 @@
         <h1>Score Management</h1>
     </div>
 
-    <div class="container">
-        <button type="button" class="btn btn-primary btn-sm">Add New Score</button>
+    <div class="container mb-4">
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='/addScore';">Add New Score</button>
     </div>
 
     <div class="container">
