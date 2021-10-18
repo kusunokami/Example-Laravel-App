@@ -3,6 +3,7 @@
 use App\Models\MusicScore;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MusicController;
+use App\Http\Controllers\AddScoreController;
 
 
 
@@ -25,8 +26,5 @@ Route::get('/test', function(){
     ]);
 });
 
-Route::get('/addScore',function(){
-    return view('addScore',[
-        "title" => "Add a Score"
-    ]);
-});
+Route::get('/addScore',[AddScoreController::class, 'addScore']);
+Route::post('/addScore/store', [AddScoreController::class, 'storeScore']);

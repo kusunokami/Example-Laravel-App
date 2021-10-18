@@ -7,7 +7,8 @@
     </div>
 
     <div class="container">
-        <form>
+        <form action="/addScore/store" method="post">
+            {{ csrf_field() }}
             <label for="sTitle">Title:</label><br>
             <input type="text" id="sTitle" name="sTitle" required><br><br>
             <label for="sComposer">Composer:</label><br>
