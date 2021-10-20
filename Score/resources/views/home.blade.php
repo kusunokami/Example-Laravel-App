@@ -17,6 +17,7 @@
                   <th scope="col">Composer(s)</th>
                   <th scope="col">Arranger(s)</th>
                   <th scope="col">Lyricist(s)</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -26,9 +27,11 @@
                     <td>{{ $music->composer }}</td>
                     <td>{{ $music->arranger }}</td>
                     <td>{{ $music->lyricist }}</td>
+                    <td><a href="/deleteScore/{{ $music->id }}">Delete</a></td>
                 </tr>
                 @endforeach
               </tbody>
         </table>
     </div>
 @endsection
+

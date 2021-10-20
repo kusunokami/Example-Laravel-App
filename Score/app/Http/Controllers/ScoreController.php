@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\ScorePiece;
 
 
-
-class AddScoreController extends Controller
+class ScoreController extends Controller
 {
     public function addScore()
     {
@@ -25,6 +24,13 @@ class AddScoreController extends Controller
             'arranger'=>$request->sArranger,
             'lyricist'=>$request->sLyricist,
         ]);
+        return redirect('/');
+    }
+
+    public function delScore($id)
+    {
+        DB::table('score_pieces')->where('id',$id)->delete();
+
         return redirect('/');
     }
 }
